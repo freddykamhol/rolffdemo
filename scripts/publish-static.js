@@ -1,4 +1,4 @@
-import { cpSync, copyFileSync, existsSync, mkdirSync, readdirSync, statSync } from 'node:fs'
+import { cpSync, copyFileSync, existsSync, mkdirSync, readdirSync, rmSync, statSync } from 'node:fs'
 import { basename, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -8,6 +8,15 @@ const distRoot = join(projectRoot, 'dist')
 if (!existsSync(join(distRoot, 'index.html'))) {
   console.error('[build] dist/index.html is missing')
   process.exit(1)
+}
+
+const publishedAssets = join(projectRoot, 'assets')
+if (existsSync(publishedAssets)) {
+  for (const file of readdirSync(publishedAssets)) {
+    if (/^index-.*\.(css|js)$/.test(file)) {
+      rmSync(join(publishedAssets, file))
+    }
+  }
 }
 
 for (const entry of readdirSync(distRoot)) {
