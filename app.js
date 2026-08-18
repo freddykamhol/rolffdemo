@@ -55,7 +55,7 @@ createServer((request, response) => {
       const valid = Buffer.byteLength(password) === Buffer.byteLength(demoPassword) && timingSafeEqual(Buffer.from(password), Buffer.from(demoPassword))
       if (valid) {
         const secure = request.headers['x-forwarded-proto'] === 'https' ? '; Secure' : ''
-        response.writeHead(303, { Location: '/', 'Set-Cookie': `rolff_demo_auth=${authToken}; HttpOnly; SameSite=Strict; Path=/; Max-Age=86400${secure}`, 'Cache-Control': 'no-store' })
+        response.writeHead(303, { Location: '/', 'Set-Cookie': [`rolff_demo_auth=${authToken}; HttpOnly; SameSite=Strict; Path=/; Max-Age=86400${secure}`, `rolff_demo_client=1; SameSite=Strict; Path=/; Max-Age=86400${secure}`], 'Cache-Control': 'no-store' })
         response.end()
       } else {
         response.writeHead(401, { 'Content-Type': 'text/html; charset=utf-8', 'Cache-Control': 'no-store' })
