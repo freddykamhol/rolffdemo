@@ -57,8 +57,18 @@ document.querySelector('#app').innerHTML = `
       <div class="section-head light reveal"><div><span class="kicker">Ausgewählte Referenzen</span><h2>Große Aufgaben.<br><em>Sauber gelöst.</em></h2></div><p>Erfahrung zeigt sich dort, wo Fläche, Technik und Verantwortung zusammenkommen.</p></div>
       <div class="project-grid">
         <article class="project p1 reveal"><div><span>Industrie · Beverungen</span><h3>HEGLA</h3><p>9.000 m² Dachfläche & 950 kWp Solaranlage</p></div></article>
-        <article class="project p2 reveal"><div><span>Gewerbe · Warburg</span><h3>OBI Fachmarkt</h3><p>6.000 m² komplette Dachsanierung</p></div></article>
-        <article class="project p3 reveal"><div><span>Denkmal · Grebenstein</span><h3>Kirche</h3><p>400 m² historische Sandsteineindeckung</p></div></article>
+        <article class="project p2 reveal">
+          <svg class="project-art obi-art" viewBox="0 0 420 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g><path class="art-shadow" d="M48 333 213 255l171 76v111H48z"/><path class="art-surface" d="M48 328 213 251l171 75-171 82z"/><path class="art-front" d="M48 328 213 408v39H48z"/><path class="art-side" d="m213 408 171-82v44l-171 77z"/><path class="art-line strong" d="M48 328 213 251l171 75-171 82zM213 408v39"/><path class="art-line roof-seams" d="m82 312 165 80m-122-100 165 80m-122-100 165 80m-120-101v157m43-137v116m43-97v76m43-56v35"/><path class="art-accent" d="M79 349h99v23H79z"/><path class="art-line detail" d="M79 384h99m-84 0v42m29-42v42m29-42v42m100-2 102-47m-102 65 102-47"/></g>
+          </svg>
+          <div><span>Gewerbe · Warburg</span><h3>OBI Fachmarkt</h3><p>6.000 m² komplette Dachsanierung</p></div>
+        </article>
+        <article class="project p3 reveal">
+          <svg class="project-art church-art" viewBox="0 0 420 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <g><path class="art-shadow" d="M73 447V270l71-57 28 22v-86l39-66 39 66v127l40-31 57 47v155z"/><path class="art-surface" d="M81 447V273l63-51 36 29v196z"/><path class="art-side" d="m180 251 46-27 48 38v185h-94z"/><path class="art-tower" d="M176 447V151l35-61 35 61v296z"/><path class="art-roof" d="m159 160 52-90 53 90-53-20zM62 279l82-69 54 44-18 24-36-29-63 51zm164-55 48 38 15-13-63-51z"/><path class="art-line strong" d="M81 447V273l63-51 36 29 46-27 48 38v185M176 447V151l35-61 35 61v296M62 279l82-69 54 44m28-30v-26l63 51"/><path class="art-line masonry" d="M91 304h77m-77 26h77m-77 26h77m-77 26h77m24-207h39m-39 31h39m-39 31h39m-39 31h39m-39 31h39m24-38h59m-59 28h59m-59 28h59m-59 28h59"/><path class="art-window" d="M116 308v-19a14 14 0 0 1 28 0v19zm81-95v-24a14 14 0 0 1 28 0v24zm4 179v-38a10 10 0 0 1 20 0v38zm54-83v-17a10 10 0 0 1 20 0v17z"/><path class="art-line cross" d="M211 70V43m-13 13h26"/></g>
+          </svg>
+          <div><span>Denkmal · Grebenstein</span><h3>Kirche</h3><p>400 m² historische Sandsteineindeckung</p></div>
+        </article>
       </div>
     </section>
 
